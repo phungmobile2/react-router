@@ -6,9 +6,15 @@
     "build": "node ./scripts/build.js",
     "clean": "lerna run clean",
     "start": "cd website && npm start",
-    "test": "lerna run test --stream"
+    "test": "lerna run test --stream",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "lerna": "2.2.0"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.316.1"
   }
 }
